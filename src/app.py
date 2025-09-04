@@ -16,12 +16,12 @@ st.set_page_config(
 # Load data and model
 @st.cache_data
 def load_data():
-    df = pd.read_csv('datasets/final_cc_attrition.csv')
+    df = pd.read_csv('src/datasets/final_cc_attrition.csv')
     return df
 
 @st.cache_resource
 def load_model():
-    model = joblib.load('models/lightgbm_best.pkl')
+    model = joblib.load('src/models/lightgbm_best.pkl')
     return model
 
 # Main app
